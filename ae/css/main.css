@@ -1,0 +1,19 @@
+.header {
+  margin-bottom: 60px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.header span {
+  display: block;
+}
+.header:hover {
+  background-color: #000;
+}
+.header {
+  font-size: 15px;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+.header {
+  color: #0f0f0f;
+}
