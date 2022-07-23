@@ -3,7 +3,6 @@ let prevButton = document.querySelector('.prev-btn');
 let dogImage = document.querySelector('.main-img-dog');
 let sliderAmount = document.querySelector('.slider-amount-img');
 let nextButton = document.querySelector('.next-btn');
-let infoDog = document.querySelector('.slider-amount-img');
 let totalDog = document.querySelector('.solution-dog');
 let dogName = document.querySelector('.main-dog-name');
 let btnReload = document.querySelector('.btn-reload-page');
@@ -42,6 +41,8 @@ let amountImg = function () {
 amountImg();
 
 // create event button
+
+// prev click
 let onShowPrevBtnClick = function (event) {
     if (currentImageIndex == 0) {
         // reloaded slider
@@ -53,6 +54,7 @@ let onShowPrevBtnClick = function (event) {
     amountImg();
 };
 
+// next click
 let onShowNextBtnClick = function (event) {
     if (currentImageIndex >= (arrayImg.length - 1)) {
         // reloaded slider
@@ -64,6 +66,7 @@ let onShowNextBtnClick = function (event) {
     amountImg();
 };
 
+// reload page
 let onReloadBtnClick = function (event) {
     location.reload()
 }
@@ -77,14 +80,18 @@ let totalBtn = function (event) {
     totalDog.remove();
 
     // notification of the consequences of the choice
-    document.querySelector('.slider-amount-img').innerHTML = `этот выбор будет иметь последствие. И его уже не изменить.`;
+    sliderAmount.innerHTML = `этот выбор будет иметь последствие. И его уже не изменить.`;
 
     // creating elements for selecting the name of the dog
     dogName.innerHTML = 'теперь введите имя этой собаки!';
+
+    // creating new input for dog name
     let input = document.createElement("input");
     input.setAttribute('type', 'text');
     let inputDogName = document.querySelector('.input-dog-name');
     inputDogName.appendChild(input);
+
+    // creating a btn to accept the name
     let btn = document.createElement("input");
     btn.type = 'button';
     btn.value = 'я хочу эти имя!';
@@ -117,7 +124,7 @@ let totalBtn = function (event) {
 }
 
 
-// button events
+// event buttons
 totalDog.addEventListener('click', totalBtn);
 prevButton.addEventListener('click', onShowPrevBtnClick);
 nextButton.addEventListener('click', onShowNextBtnClick);
