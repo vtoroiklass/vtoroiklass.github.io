@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/default.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../css/doc.css">
+    <link rel="stylesheet" href="../../css/scrollbar.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+        <code class="js">
+const slides = document.querySelectorAll('.slide-single');
+const slider = [];
+let step = 0;
+let offset = 0;
+let width = document.querySelector('.slide').offsetWidth
+const myBtnNext = document.querySelector('.slide-btn-next');
+
+for (let i = 0; i < slides.length; i++) {
+    slider[i] = slides[i].src
+    slides[i].remove()
+}
+
+function draw() {
+    let img = document.createElement('img');
+    img.src = slider[step];
+    img.classList.add('slide-single');
+    img.style.left = offset * width + 'px';
+    document.querySelector('.slide').appendChild(img);
+
+    if (step + 1 === slider.length) {
+        step = 0;
+    } else step++
+    offset = 1;
+}
+
+function left() {
+    myBtnNext.onclick = null;
+    const slides2 = document.querySelectorAll('.slide-single');
+    let offset2 = 0;
+    for (let i = 0; i < slides2.length; i++) {
+        slides2[i].style.left = offset2 * width - width + 'px'
+        offset2++;
+    }
+    setTimeout(() => {
+        slides2[0].remove();
+        draw();
+        myBtnNext.onclick = left
+    }, 1000)
+}
+
+draw(); draw();
+
+myBtnNext.onclick = left;
+    </code></pre>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="script/doc.js"></script>
+</body>
+
+</html>

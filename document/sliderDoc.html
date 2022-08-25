@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/default.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="css/doc.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="col-lg-5 offset-lg-3">
+                    <select name="choice-programming-language" class="lang-selection">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="js">JavaScript</option>
+                    </select>
+                </div>
+                <div class="col-lg-12">
+                    <div class="code-block">
+                        <p class="html"> <iframe src="sliderCode/htmlCode.html" class="calc-html"
+                                frameborder="0"></iframe></p>
+                        <p class="css" style="display: none;"> <iframe src="sliderCode/cssCode.html" class="calc-html"
+                                frameborder="0"></iframe></p>
+                        <p class="js" style="display: none;"> <iframe src="sliderCode/jsCode.html" class="calc-html"
+                                frameborder="0"></iframe></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="script/doc.js"></script>
+</body>
+
+</html>
