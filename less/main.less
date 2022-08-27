@@ -2,6 +2,11 @@ body {
     background-color: #202124;
     color: aliceblue;
     font-family: sans-serif;
+
+}
+
+.container {
+    overflow: hidden;
 }
 
 .my-header {
@@ -26,6 +31,7 @@ body {
     text-align: center;
 
     &-works {
+        margin-top: -80px;
         margin: 100px 0;
         border: 2px solid #151618;
         padding: 10px;
@@ -37,21 +43,19 @@ body {
         left: 73%;
         transition: all 0.5s;
 
-        &-slider {
+        &-margin {
             margin-top: -80px;
         }
 
-        
+        &-top {
+            margin-top: 200px;
+        }
 
         &-left {
             transition: all 0.5s;
             left: 0%;
             color: #000000;
         }
-        &-top {
-            margin-top: 200px;
-        }
-
     }
 }
 
@@ -77,9 +81,6 @@ body {
     }
 }
 
-.wrapper {
-    overflow: hidden;
-}
 
 
 .about-me {
@@ -141,12 +142,50 @@ body {
     margin-top: 50px;
     background-color: #1D1E21;
     transition: all 0.4s;
-    
-    width: 100%;
 
     &-visible {
         left: 0%;
     }
-
 }
 
+.game-frame {
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 100%;
+    height: 598px;
+    transition: all 0.5s;
+
+    &-visible {
+        height: 598px;
+    }
+}
+
+.slider-frame {
+    position: absolute;
+    width: 120%;
+    height: 500px;
+    left: -110%;
+
+    &-visible {
+        left: 0%;
+    }
+}
+
+.my-game {
+    margin-top: 50px;
+    position: relative;
+    left: 110%;
+    background-color: #1D1E21;
+    transition: all 0.4s;
+    border-radius: 15px;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+
+    &-visible {
+        transition: all 0.5s;
+        height: 600px;
+        left: 0%;
+        opacity: 1;
+    }
+}

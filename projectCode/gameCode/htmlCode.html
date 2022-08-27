@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/default.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../css/doc.css">
+    <link rel="stylesheet" href="../../css/scrollbar.css">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        <code class="html">
+          &lt;div class="screen"&gt;
+          &lt;h1&gt;<span class="txt">Aim Training</span>&lt;/h1&gt;
+          &lt;a href="" class="start" id="start"&gt;<span class="txt">Начать игру</span>&lt;/a&gt;
+        &lt;/div&gt;
+      
+        &lt;div class="screen"&gt;
+          &lt;h1&gt;<span class="txt">Выберите время</span>&lt;/h1&gt;
+          &lt;ul class="time-list" id="time-list"&gt;
+            &lt;li&gt;
+              &lt;button class="time-btn" data-time="10"&gt;
+              <span class="txt">10 сек</span>
+              &lt;/button&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;button class="time-btn" data-time="20"&gt;
+              <span class="txt">20 сек</span>
+              &lt;/button&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;button class="time-btn" data-time="30"&gt;
+              <span class="txt">30 сек</span>
+              &lt;/button&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;button class="time-btn" data-time="40"&gt;
+              <span class="txt">40 сек</span>
+              &lt;/button&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      
+        &lt;div class="screen"&gt;
+          &lt;button class="reload-btn" onclick="location.reload(); return false;"&gt;<span class="txt">&#8635;</span>&lt;/button&gt;
+          &lt;h3&gt;Осталось &lt;span id="time"&gt;<span class="txt">00:00</span>&lt;/span&gt;&lt;/h3&gt;
+          &lt;div class="board" id="board"&gt;&lt;/div&gt;
+        &lt;/div&gt;      
+        </code>
+    </pre>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="script/doc.js"></script>
+</body>
+</html>
